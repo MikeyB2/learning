@@ -1,0 +1,189 @@
+/* Semantic HTML means labeled correctl and not all div tags
+should have header, section, footer and lang and role attributes 
+<!DOCTYPE html>
+<html lang="en">
+  <head><title>My Awesome Page</title></head>
+  <body>
+    <header role="banner">
+      <h1>Welcome to Thinkful!</h1>
+    </header>
+    <section>
+      <h2>This is a section header!</h2>
+      <p>Your lorum ipsum text copy goes here. Your lorum ipsum text copy goes here. Your lorum ipsum text copy goes here.</p>
+      <p>More lorum ipsum goes here. More lorum ipsum goes here. More lorum ipsum goes here. More lorum ipsum goes here.</p>
+    </section>
+    <footer role="contentinfo">
+      <p>This is where my contact links and copyright info go.</p>
+    </footer>
+  </body>
+</html>
+*/
+
+/* how to get 3 divs on the same row with a full page background that is responsive
+.heading{
+  background-color:black;
+  background: url(https://images.unsplash.com/photo-1451444635319-e5e247fbb88d?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=704d9fef9d122240e6e467de7755fc5c) no-repeat center center fixed;
+  background-size: cover;
+  
+  width:100%;
+  height:500px;
+  display: inline-block;
+}
+
+h1{
+  text-align:center; 
+  color:white;
+  margin-top:200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.textBlock{
+  width:33.3%;
+  background-color:lightgreen;
+  float: left;
+} */
+
+/* Cascade means  */
+
+/* Link to CSS page goes in head*/
+
+/* <link rel="stylesheet" type="text/css" href="./main.css"> */
+/*or index.css if in same folder */
+
+p {
+  color: red !important
+    /* overrides other css styles if it has this !important tag*/
+}
+
+* {
+  /* how to align block elements horizontally and centered */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center
+}
+
+/* float property */
+
+/* primary case for float is to get text to wrap around an image or container but it can be used for responsive grids */
+
+* {
+  float: left;
+  /* floats the elements to left helps with 3 divs on the same row with right % of width*/
+  float: right;
+  /*floats the  elements to right */
+  clear: left;
+  /*makes elements aware of floated items to the left */
+  clear: right
+    /* makes elements aware of floated items to the right */
+}
+
+/* position properties */
+
+* {
+  position: static;
+  /*default value. normal flow so other elements will position themselves around other normal flow elements and gets rendered in the order it appears */
+  position: absolute;
+  /*outside normal flow and can be offset but not like fixed they are offset in relation to their parent container with a non-static position.  navbar with a logo to the left and links to the right */
+  position: relative;
+  /*still in normal flow but we can offset the properties left, right, top, bottom*/
+  position: fixed
+    /*it will stay in place even when the user scrolls.  normal positon on a sticky navbar or footer and not in normal flow so other elements think it doesnt exist*/
+}
+
+/* Display properties */
+
+/* Total space taken up in the box model includes width, height, padding, border,and margin */
+
+* {
+  display: inline;
+  /* a strong em or span dont start a new line and you cant set the width, height, margin or padding.  it use only the amount it needs.  but you can change font size to larger or smaller or font color change*/
+  display: block;
+  /* display on new line. may contain additional block elements or inline elements.  the heigh an width can be set.  by default they take up the whole width but that can be changed by width or max-width in css*/
+  display: inline-block;
+  /* combines both characteristics of the above.  it displays inline and can also be given a width and everything normal inline cannot*/
+}
+
+responsive grid system
+/*  */
+
+psuedo-elements
+/* allow you to render content just before or after you element. this is good for smart quotes around block quotes and is written like this.  the below 
+ }
+
+ these are some of the psuedo elements
+
+ ul li::before {
+   will affect whatever comes before the ul li item
+ }
+
+  ul li::after {
+   will affect whatever comes after the ul li item
+ }
+ a:link {
+  /* unvisited link */
+
+/*
+}
+
+a:visited {
+  /* visited link */
+
+/*
+}
+
+a:hover {
+  /* mouse over link */
+
+/*
+}
+
+a:focus {
+  /* keyboard focus on link */
+
+/*
+}
+
+a:active {
+  /* selected link (i.e., you've clicked
+    but not released on the link)
+ */
+
+/*
+}*/
+
+attribute selectors
+/* target elements attribute value
+input[type="radio"] 
+exact match                             element[attribute=value]
+match patter anywhere                   element[attribute*=value]   
+match pattern at beginning of value     element[attribute^=value]
+match patter at end of value            element[attribute$=value]
+*/
+
+box-sizing: border-box
+/* this adds the padding, border, content, and margin all together making your styling clean all around */
+
+/* Total space taken up in the box model includes width, height, padding, border,and margin  so if you set the width to 200px padding to 10px, margin 15px, and border to 1px the element will be larger than the 200px width if you dont use the border-box style*/
+
+inline vs block
+/* inline keeps the width at only what is needed and dopnt move to another line.  
+ block is a box model that moves the next block element to the next line */
+
+form when to use
+/* a good time for a form element is a contact form or a search form */
+
+media queries
+/* are use for when a specific styling is applied to a supplied condition passed through the media query like at a certain screen size change to this styling */
+
+grid
+/* they are good for styling your code uniformly for responsive designs */
+
+dom manipulation
+/* document object model and manipulation is when you change what is shown on the screen */
+
+event listener
+/* is code that watches or listens for something like a button click or a mouse over or a keydown on the keyboard */
+
+spaghetti code
+/* is when you write a bunch of code into a large function when it should be broken into smaller functions that are ran together and it is easier to read and follow */
