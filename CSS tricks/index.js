@@ -613,3 +613,36 @@ function findById(items, idNum) {
   // Alter values below to test your code
   updateRecords(2468, "tracks", "test");
   console.log(updateRecords(5439, "artist", "ABBA"));
+
+
+
+  $.ajax({
+    method: 'POST',
+    url: URL_Variable,
+    data: JSON.stringify(item),
+    success: function (data) {
+      // code that you want to happen on success
+    },
+    error: function (request, status, error) {
+      let message = " There was an error: " + request.responseText;
+      console.log(message);
+    },
+    dataType: 'json',
+    contentType: 'application/json'
+  });
+
+  // filter
+
+  let canDrink = [];
+  for (let i = 0; i < ages.length; i++) {
+    if (ages[i] >= 21) {
+      canDrink.push(ages[i]);
+    }
+  }
+
+  const canDrink = ages.filter(function (age) {
+    if (age >= 21) {
+      return true;
+    }
+  });
+  const canDrink = ages.filter(ager => age >= 21);
